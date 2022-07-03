@@ -2,6 +2,7 @@
 import './App.css';
 import StaffList from './components/StaffList';
 import { STAFFS } from './data/Staff';
+// import Option from './components/Option';
 function App() {
   let elements = STAFFS.map((staff) => {
     return <StaffList
