@@ -16,7 +16,7 @@ class StaffList extends Component {
             this.setState(null)
             check = true
         }
-      
+    
         
     }
     render() {
