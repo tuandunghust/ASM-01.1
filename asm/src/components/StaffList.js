@@ -11,11 +11,13 @@ class StaffList extends Component {
         if(check){
             this.setState(this.props)
             check = false
+            console.log(this.state)
         }else {
-            this.state = null
+            this.setState(null)
+            check = true
         }
       
-
+        
     }
     render() {
         return (
@@ -30,7 +32,7 @@ class StaffList extends Component {
                         </div>
                     </div>
                 </div>
-                {this.state  && (<div className="col-12 col-md-12 col-lg-12">
+                {  this.state && (<div className="col-12 col-md-12 col-lg-12">
                     <p>Họ và tên: {this.state.name}</p>
                     <p>Ngày sinh: {dateFormat(this.state.age, "dd/mm/yyyy")}</p>
                     <p>Ngày vào công ty: {dateFormat(this.state.startDate, "dd/mm/yyyy")}</p>
