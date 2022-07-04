@@ -1,20 +1,31 @@
 import { Component } from "react";
 
 import dateFormat, { masks } from "dateformat";
-var  check = true;
+
 class StaffList extends Component {
     constructor(props) {
         super(props);
-        this.state = null
+        this.state = {
+            check:true,
+            detail : null
+        }
     }
     onAdd = () => {
-        if(check){
-            this.setState(this.props)
-            check = false
-            console.log(this.state)
+        if(this.state.check){
+           
+            this.setState({
+                detail : this.props,
+                check :false
+            })
+           
+            
+        
         }else {
-            this.setState(null)
-            check = true
+            this.setState({
+                detail : null,
+                check : true
+            })
+            
         }
     
         
@@ -32,13 +43,13 @@ class StaffList extends Component {
                         </div>
                     </div>
                 </div>
-                {  this.state && (<div className="col-12 col-md-12 col-lg-12">
-                    <p>Họ và tên: {this.state.name}</p>
-                    <p>Ngày sinh: {dateFormat(this.state.age, "dd/mm/yyyy")}</p>
-                    <p>Ngày vào công ty: {dateFormat(this.state.startDate, "dd/mm/yyyy")}</p>
-                    <p>Phòng ban: {this.state.department.name}</p>
-                    <p>Số ngày nghỉ còn lại: {this.state.annualLeave}</p>
-                    <p>Số ngày đã làm thêm: {this.state.overTime}</p>
+                {  this.state.detail && (<div className="col-12 col-md-12 col-lg-12">
+                    <p>Họ và tên: {this.state.detail.name}</p>
+                    <p>Ngày sinh: {dateFormat(this.state.detail.age, "dd/mm/yyyy")}</p>
+                    <p>Ngày vào công ty: {dateFormat(this.state.detail.startDate, "dd/mm/yyyy")}</p>
+                    <p>Phòng ban: {this.state.detail.department.name}</p>
+                    <p>Số ngày nghỉ còn lại: {this.state.detail.annualLeave}</p>
+                    <p>Số ngày đã làm thêm: {this.state.detail.overTime}</p>
                 </div>)}
             </>
 
