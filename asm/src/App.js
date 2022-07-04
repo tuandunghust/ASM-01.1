@@ -22,6 +22,11 @@ function App() {
       <header>
         Ứng dụng quản lý nhân sự v1.0
       </header>
+      <form>
+        <label>Tùy chọn hiển thị theo cột</label>
+        <select>3</select>
+        <select>4</select>
+      </form>
       <div className="container-fluid">
         <div className="row">
         {elements}
