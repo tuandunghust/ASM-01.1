@@ -26,6 +26,8 @@ function App() {
         <label>Tùy chọn hiển thị theo cột</label>
         <select>
           <option>3</option>
+          <option>4</option>
+
         </select>
         
       </form>
