@@ -24,8 +24,10 @@ function App() {
       </header>
       <form>
         <label>Tùy chọn hiển thị theo cột</label>
-        <select>3</select>
-        <select>4</select>
+        <select>
+          <option>3</option>
+        </select>
+        
       </form>
       <div className="container-fluid">
         <div className="row">
